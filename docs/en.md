@@ -13,24 +13,25 @@ Use this file:
 ## Add the Rule in V2Box or V2Box Pro
 
 1. Open **V2Box** or **V2Box Pro**.
-2. Go to **Routing**.
-3. Click **Add Rule**.
-4. Set **Remarks** to:
+2. Select the V2Ray / VLESS / VMess config that you already use.
+3. Go to **Routing**.
+4. Click **Add Rule**.
+5. Set **Remarks** to:
 
 ```text
 Iran Direct
 ```
 
-5. Set **Outbound Tag** to:
+6. Set **Outbound Tag** to:
 
 ```text
 direct
 ```
 
-6. Copy the full content of [`rules/iran-direct-v2box.txt`](../rules/iran-direct-v2box.txt).
-7. Paste it into **Domain (comma separated)**.
-8. Click **Save**.
-9. Restart the VPN connection once.
+7. Copy the full content of [`rules/iran-direct-v2box.txt`](../rules/iran-direct-v2box.txt).
+8. Paste it into **Domain (comma separated)**.
+9. Click **Save**.
+10. Turn the VPN off and on once.
 
 ## Rule Order
 

@@ -13,24 +13,25 @@ Rule آماده اینجاست:
 ## آموزش اضافه کردن در V2Box یا V2Box Pro
 
 1. اپ **V2Box** یا **V2Box Pro** را باز کنید.
-2. وارد بخش **Routing** شوید.
-3. روی **Add Rule** بزنید.
-4. در بخش **Remarks** بنویسید:
+2. کانفیگ V2Ray / VLESS / VMess که خودتان استفاده می‌کنید را انتخاب کنید.
+3. وارد بخش **Routing** شوید.
+4. روی **Add Rule** بزنید.
+5. در بخش **Remarks** بنویسید:
 
 ```text
 Iran Direct
 ```
 
-5. مقدار **Outbound Tag** را روی این گزینه بگذارید:
+6. مقدار **Outbound Tag** را روی این گزینه بگذارید:
 
 ```text
 direct
 ```
 
-6. محتوای فایل [`rules/iran-direct-v2box.txt`](../rules/iran-direct-v2box.txt) را کامل کپی کنید.
-7. آن را در بخش **Domain (comma separated)** قرار دهید.
-8. روی **Save** بزنید.
-9. اگر VPN روشن است، یک بار خاموش و دوباره روشنش کنید.
+7. محتوای فایل [`rules/iran-direct-v2box.txt`](../rules/iran-direct-v2box.txt) را کامل کپی کنید.
+8. آن را در بخش **Domain (comma separated)** قرار دهید.
+9. روی **Save** بزنید.
+10. VPN را یک بار خاموش و دوباره روشن کنید.
 
 ## ترتیب Ruleها
 

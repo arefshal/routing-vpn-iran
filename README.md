@@ -13,11 +13,13 @@ Many users in Iran have to turn their VPN off for local websites, banking apps, 
 ## Quick Start
 
 1. Open **V2Box** or **V2Box Pro**.
-2. Go to **Routing**.
-3. Add a new rule named `Iran Direct`.
-4. Set **Outbound Tag** to `direct`.
-5. Paste the content of [`rules/iran-direct-v2box.txt`](rules/iran-direct-v2box.txt) into **Domain (comma separated)**.
-6. Save the rule and restart the VPN connection once.
+2. Select the V2Ray / VLESS / VMess config that you already use.
+3. Go to **Routing**.
+4. Add a new rule named `Iran Direct`.
+5. Set **Outbound Tag** to `direct`.
+6. Paste the content of [`rules/iran-direct-v2box.txt`](rules/iran-direct-v2box.txt) into **Domain (comma separated)**.
+7. Save the rule.
+8. Turn the VPN off and on once.
 
 For the full walkthrough, use:
 
