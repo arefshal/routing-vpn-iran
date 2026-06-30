@@ -1,150 +1,54 @@
 # Routing VPN Iran
 
-**VPN روشن، سایت‌ها و بانک‌های ایرانی بدون دردسر.**
+Keep your VPN on while Iranian websites, banks, and payment gateways use a direct route.
 
-این repo یک لیست آماده برای V2Box و V2Box Pro دارد تا سایت‌ها، بانک‌ها، درگاه‌های پرداخت و سرویس‌های مهم ایرانی به جای Proxy از مسیر `direct` باز شوند. نتیجه این است که لازم نیست برای ورود به بانک، پرداخت، دیجی‌کالا، آپارات، اسنپ و سرویس‌های مشابه مدام VPN را خاموش و روشن کنید.
+[![Persian Guide](https://img.shields.io/badge/Persian_Guide-%D8%A2%D9%85%D9%88%D8%B2%D8%B4_%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-1f7a8c?style=for-the-badge)](docs/fa.md)
+[![English Guide](https://img.shields.io/badge/English_Guide-Open-2563eb?style=for-the-badge)](docs/en.md)
+[![Copy Rule](https://img.shields.io/badge/Copy_V2Box_Rule-Direct_Routing-f97316?style=for-the-badge)](rules/iran-direct-v2box.txt)
 
-> English guide is below.
+## Why
 
-## فایل‌های آماده
+Many users in Iran have to turn their VPN off for local websites, banking apps, payment gateways, marketplaces, and streaming services. This repository provides copy-ready routing rules for **V2Box** and **V2Box Pro** so Iranian services can use `direct` while the rest of your traffic can keep using `proxy`.
 
-- [`rules/iran-direct-v2box.txt`](rules/iran-direct-v2box.txt): نسخه آماده copy/paste برای V2Box و V2Box Pro
-- [`rules/iran-direct-readable.txt`](rules/iran-direct-readable.txt): همان Ruleها به صورت دسته‌بندی‌شده و قابل خواندن
+## Quick Start
 
-## آموزش اضافه کردن در V2Box Pro
+1. Open **V2Box** or **V2Box Pro**.
+2. Go to **Routing**.
+3. Add a new rule named `Iran Direct`.
+4. Set **Outbound Tag** to `direct`.
+5. Paste the content of [`rules/iran-direct-v2box.txt`](rules/iran-direct-v2box.txt) into **Domain (comma separated)**.
+6. Save the rule and restart the VPN connection once.
 
-1. V2Box Pro را باز کنید.
-2. وارد بخش **Routing** شوید.
-3. روی **Add Rule** بزنید.
-4. در بخش **Remarks** بنویسید:
+For the full walkthrough, use:
 
-```text
-Iran Direct
-```
-
-5. مقدار **Outbound Tag** را روی این گزینه بگذارید:
-
-```text
-direct
-```
-
-6. محتوای فایل [`rules/iran-direct-v2box.txt`](rules/iran-direct-v2box.txt) را کامل کپی کنید.
-7. آن را در بخش **Domain (comma separated)** قرار دهید.
-8. روی **Save** بزنید.
-9. اگر VPN روشن است، یک بار خاموش و دوباره روشنش کنید.
-
-## ترتیب Ruleها
-
-ترتیب Ruleها مهم است. Rule مربوط به ایران باید قبل از Rule عمومی Proxy پردازش شود.
-
-پیشنهاد:
-
-```text
-1. Iran Direct  -> direct
-2. Other rules  -> proxy / block / ...
-```
-
-اگر یک سایت خارجی مثل LinkedIn، YouTube، GitHub یا Google بعد از اضافه کردن این Rule مشکل پیدا کرد، آن سایت را داخل Rule ایران نگذارید. این لیست فقط برای سرویس‌هایی است که باید مستقیم و بدون Proxy باز شوند.
-
-## نکته مهم درباره geosite
-
-در بعضی نسخه‌های V2Box Pro، استفاده از این Rule باعث خطای `geosite.dat` می‌شود:
-
-```text
-geosite:ir
-```
-
-برای همین در این repo از `geosite:ir` استفاده نشده و به جای آن از این Rule عمومی استفاده شده است:
-
-```text
-regexp:.*\.ir$
-```
-
-## چه چیزهایی پوشش داده شده؟
-
-- سایت‌های `.ir`
-- بانک‌های مهم ایرانی
-- درگاه‌های پرداخت و شاپرک
-- فروشگاه‌ها و مارکت‌پلیس‌ها
-- ویدیو، ورزش و رسانه
-- تاکسی، غذا، سفر و پست
-- اپراتورها و سرویس‌های اینترنت
-- چند وب‌اپ بانکی و وابستگی‌های ضروری آن‌ها
-
-## مشارکت
-
-اگر دامنه‌ای جا افتاده یا یک سرویس ایرانی با VPN روشن درست کار نمی‌کند، یک Issue یا Pull Request باز کنید و این اطلاعات را بنویسید:
-
-- نام سرویس
-- آدرس سایت یا وب‌اپ
-- خطا یا رفتار مشکل‌دار
-- دامنه‌هایی که فکر می‌کنید باید اضافه شوند
-
----
-
-# Routing VPN Iran
-
-**Keep your VPN on while Iranian websites and banking services stay reachable.**
-
-This repository provides copy-ready routing rules for V2Box and V2Box Pro. The rules send major Iranian websites, banking apps, payment gateways, marketplaces, media services, operators, and local services through `direct` instead of `proxy`.
-
-The practical goal is simple: avoid turning your VPN off and on every time you need to use an Iranian bank, payment gateway, marketplace, or local service.
+- [آموزش فارسی](docs/fa.md)
+- [English Guide](docs/en.md)
 
 ## Files
 
-- [`rules/iran-direct-v2box.txt`](rules/iran-direct-v2box.txt): copy-ready V2Box / V2Box Pro rule
-- [`rules/iran-direct-readable.txt`](rules/iran-direct-readable.txt): categorized readable version
+- [`rules/iran-direct-v2box.txt`](rules/iran-direct-v2box.txt): copy-ready one-line rule for V2Box / V2Box Pro
+- [`rules/iran-direct-readable.txt`](rules/iran-direct-readable.txt): readable categorized version of the same domains
 
-## How to add the rule in V2Box Pro
+## Rule Order
 
-1. Open V2Box Pro.
-2. Go to **Routing**.
-3. Click **Add Rule**.
-4. Set **Remarks** to:
-
-```text
-Iran Direct
-```
-
-5. Set **Outbound Tag** to:
-
-```text
-direct
-```
-
-6. Copy the full content of [`rules/iran-direct-v2box.txt`](rules/iran-direct-v2box.txt).
-7. Paste it into **Domain (comma separated)**.
-8. Click **Save**.
-9. Restart the VPN connection once.
-
-## Rule order
-
-Rule order matters. The Iran direct rule should be evaluated before broad proxy rules.
-
-Recommended order:
+Put the Iran direct rule before broad proxy rules:
 
 ```text
 1. Iran Direct  -> direct
 2. Other rules  -> proxy / block / ...
 ```
 
-Do not add foreign services such as LinkedIn, YouTube, GitHub, or Google to the Iran direct rule. Those services should usually continue using your proxy route.
+Do not add unrelated foreign services to the Iran direct rule. Those services should usually continue using your proxy route.
 
-## Why there is no geosite:ir
+## No geosite:ir
 
-Some V2Box Pro setups fail with `geosite.dat` errors when this rule is used:
-
-```text
-geosite:ir
-```
-
-This repository avoids `geosite:ir` and uses this safer rule instead:
+Some V2Box Pro setups fail with `geosite.dat` errors when `geosite:ir` is used. This repository avoids `geosite:ir` and uses this safer rule instead:
 
 ```text
 regexp:.*\.ir$
 ```
 
-## Covered categories
+## Covered Categories
 
 - `.ir` domains
 - Iranian banks
@@ -163,3 +67,7 @@ If a domain is missing or an Iranian service still fails while VPN is on, open a
 - Website or web app URL
 - The error or broken behavior
 - Suggested domains to add
+
+## License
+
+MIT
